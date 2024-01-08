@@ -1,0 +1,32 @@
+Table province {
+  id integer
+  province_name integer
+  created_at timestamp
+}
+
+Table cities {
+  id integer [primary key]
+  city_name varchar
+  province_id integer
+  created_at timestamp
+}
+
+Table suburbs {
+  id integer [primary key]
+  suburb_name varchar
+  city_id integer
+  created_at timestamp
+}
+
+Table municipality {
+  id integer [primary key]
+  municipality_name varchar
+  suburb_id integer
+  created_at timestamp
+}
+
+
+
+Ref: cities.province_id > province.id
+Ref: suburbs.city_id > cities.id
+Ref: municipality.suburb_id > suburbs.id

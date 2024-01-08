@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@amcharts/amcharts4": "^4.10.38",
+    "@amcharts/amcharts4-geodata": "^4.1.28",
+    "@amcharts/amcharts5": "^5.7.6",
+    "@amcharts/amcharts5-geodata": "^5.1.2",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.1.1",
     "@hookform/resolvers": "^3.1.1",
@@ -41,6 +45,7 @@
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
+    "eslint-plugin-react-hooks": "^5.0.0-canary-7118f5dd7-20230705",
     "prisma": "^5.7.1"
   }
 }

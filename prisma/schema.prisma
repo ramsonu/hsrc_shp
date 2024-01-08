@@ -18,3 +18,36 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model Province {
+  id            Int      @id @default(autoincrement())
+  province_name String
+  createdAt     DateTime @default(now())
+  Cities        Cities?
+}
+
+model Cities {
+  id         Int      @id @default(autoincrement())
+  city_name  String
+  province   Province @relation(fields: [provinceId], references: [id])
+  provinceId Int      @unique
+  createdAt  DateTime @default(now())
+  Suburbs    Suburbs?
+}
+
+model Suburbs {
+  id           Int           @id @default(autoincrement())
+  suburb_name  String
+  cities       Cities        @relation(fields: [cityId], references: [id])
+  cityId       Int           @unique
+  createdAt    DateTime      @default(now())
+  municipality municipality?
+}
+
+model municipality {
+  id                Int      @id @default(autoincrement())
+  municipality_name String
+  suburbs           Suburbs  @relation(fields: [suburbId], references: [id])
+  suburbId          Int      @unique
+  createdAt         DateTime @default(now())
+}
