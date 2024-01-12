@@ -11,7 +11,7 @@ const Navbar = async() => {
     {
       id: 1,
       mname: "dashboards",
-      link: "/dashboards",
+      link: "/admin/dashboard",
     },
     {
       id: 2,
