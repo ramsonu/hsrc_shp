@@ -55,7 +55,7 @@ const SignUpForm = () => {
       body: JSON.stringify({
         username: values.username,
         email: values.email,
-        password: values.password
+        password: values.password,
       })
     })
 

@@ -52,8 +52,14 @@ const SignInForm = () => {
         variant:"destructive"
       })
     }else{
-      router.refresh();
-      router.push('/admin');
+      if(values.email === 'ramakrishna@gmail.com'){
+        router.refresh();
+        router.push('/admin');
+      }else{
+        router.refresh();
+        router.push('/user');
+      }
+     
     }
   };
 

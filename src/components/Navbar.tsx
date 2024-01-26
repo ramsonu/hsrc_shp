@@ -16,22 +16,22 @@ const Navbar = async() => {
     {
       id: 2,
       mname: "map explorer",
-      link: "mapexplorer",
+      link: "/admin/mapexplorer",
     },
     {
       id: 3,
-      mname: "download data",
-      link: "downloaddata",
+      mname: "map explorer1",
+      link: "/admin/mapexplorer1",
     },
     {
       id: 4,
-      mname: "resources",
-      link: "resources",
+      mname: "Search",
+      link: "/admin/searchmap",
     },
     {
       id: 5,
       mname: "about the project",
-      link: "abouttheproject",
+      link: "/admin/abouttheproject",
     },
   ];
 
